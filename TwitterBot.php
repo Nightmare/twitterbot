@@ -13,7 +13,7 @@ class TwitterBot
 
     public function post($message)
     {
-        $this->oauth->OAuthRequest('https://twitter.com/statuses/update.xml', 'POST', array('status' => $message));
+        $this->oauth->post('statuses/update', array('status' => $message));
     }
 
     public function autoFollow()
