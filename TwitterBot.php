@@ -16,6 +16,9 @@ class TwitterBot
         $this->oauth->post('statuses/update', array('status' => $message));
     }
 
+    /**
+     * Follow all users who are following you.
+     */
     public function autoFollow()
     {
         $followers = $this->oauth->get('followers/ids', array('cursor' => -1));
@@ -28,6 +31,9 @@ class TwitterBot
         }
     }
 
+    /**
+     * Unfollow all users who are not following you.
+     */
     public function autoUnfollow()
     {
         $followers = $this->oauth->get('followers/ids', array('cursor' => -1));
@@ -40,4 +46,3 @@ class TwitterBot
         }
     }
 }
-
