@@ -8,6 +8,7 @@ Features
 * post a message
 * auto-follow
 * auto-unfollow
+* search
 
 Usage
 -----
