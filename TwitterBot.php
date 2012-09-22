@@ -45,4 +45,9 @@ class TwitterBot
             }
         }
     }
+
+    public function search(array $query)
+    {
+        return $this->oauth->get('search/tweets', $query);
+    }
 }
